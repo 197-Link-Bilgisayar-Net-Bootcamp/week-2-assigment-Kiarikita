@@ -9,6 +9,8 @@ namespace ProductFinder.DataAccess.Abstract
 {
     public interface IProductRepository
     {
+        //methodlar tanımlandı
+
         List<Product> GetAllProducts();
 
         Product GetProductById(int id);

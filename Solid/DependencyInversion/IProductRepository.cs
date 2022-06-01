@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Solid.DependencyInversion
 {
-    public class DIPBadExample
+    //ders örneği
+    public interface IProductRepository
     {
+        List<string> GetList();
     }
 }

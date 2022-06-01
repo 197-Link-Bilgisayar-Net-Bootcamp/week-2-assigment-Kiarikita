@@ -9,6 +9,8 @@ namespace ProductFinder.Business.Abstract
 {
     public interface IProductService
     {
+        //dependency injection kullanabilmek için interface tanımlandı
+
         List<Product> GetAllProducts();
 
         Product GetProductById(int id);

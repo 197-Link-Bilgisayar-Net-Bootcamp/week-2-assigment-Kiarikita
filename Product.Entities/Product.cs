@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProductFinder.Entities
 {
+    //Product tablosunda hangi sütünların olacağını tanımlıyoruz
     public class Product
     {
         //primary key, identity olarak 1 den başlayarak ilerleyecek

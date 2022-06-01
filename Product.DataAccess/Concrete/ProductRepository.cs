@@ -27,6 +27,7 @@ namespace ProductFinder.DataAccess.Concrete
                 var model = GetProductById(id);
                 //var model = productDbContext.Products.Find(id);
                 productDbContext.Products.Remove(model);
+                //remove ile seçilen product db'den silindi
                 productDbContext.SaveChanges();
             }
         }
@@ -35,7 +36,7 @@ namespace ProductFinder.DataAccess.Concrete
         {
             using (var productDbContext = new ProductDbContext())
             {
-                return productDbContext.Products.ToList();
+                return productDbContext.Products.ToList(); //database ile ilgili methodlara ulaşılabiliyor
             }//using --> bu methodtan çıkıldığı anda bu methodla ilgili alanları hafızadan temizler
         }
 
@@ -44,6 +45,7 @@ namespace ProductFinder.DataAccess.Concrete
             using (var productDbContext = new ProductDbContext())
             {
                 return productDbContext.Products.Find(id);
+                //find methodunu id = primary key olduğu için kullanabildi ancak pk olmasaydı firstordefault kullanılacaktı
             }
         }
 

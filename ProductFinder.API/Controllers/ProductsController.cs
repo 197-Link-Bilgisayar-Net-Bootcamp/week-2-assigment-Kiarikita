@@ -8,8 +8,9 @@ namespace ProductFinder.API.Controllers
     [ApiController]
     public class ProductsController : Controller
     {
+        //dependency injection
         private IProductService _productService;
-
+        
         public ProductsController(IProductService productService)
         {
             _productService = productService;
